@@ -1,3 +1,4 @@
+import { NuqsAdapter } from 'nuqs/adapters/next/app'
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 
@@ -40,7 +41,9 @@ export default function RootLayout({
             <JotaiProvider>
               <Toaster />
               <Modals />
+              <NuqsAdapter>
               {children}
+              </NuqsAdapter>
             </JotaiProvider>
           </ConvexClientProvider>
         </body>
