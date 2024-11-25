@@ -22,10 +22,10 @@ const schema = defineSchema({
     workspaceId: v.id("workspaces"),
   }).index("by_workspace_id", ["workspaceId"]),
   conversations: defineTable({
-    worskpaceId: v.id("workspaces"),
+    workspaceId: v.id("workspaces"),
     memberOneId: v.id("members"),
     memberTwoId: v.id("members"),
-  }).index("by_workspace_id", ["worskpaceId"]),
+  }).index("by_workspace_id", ["workspaceId"]),
   messages: defineTable({
     body: v.string(),
     image: v.optional(v.id("_storage")),
